@@ -13,13 +13,17 @@
 find . -name "*" -type d -maxdepth 1 | while read directoryName
 
 do
-	GITIGNOREFILE=/Users/carlossantiagocruz/SWIFT-PROGRAMMING/$directoryName/.gitignore
+	GITIGNORE_FILE=/Users/carlossantiagocruz/SWIFT-PROGRAMMING/$directoryName/.gitignore
 
-	if [ ! -f "$GITIGNOREFILE" ]
+	if [ ! -f "$GITIGNORE_FILE" ]
 			then 
 					echo "gitignore file does not exist in $directoryName"
 					echo "Copying ..."
 					# does whatever else you want
-					cat /Users/carlossantiagocruz/SWIFT-PROGRAMMING/.gitignore | head -31 > /Users/carlossantiagocruz/SWIFT-PROGRAMMING/$irectoryName/.gitignore
+					cat /Users/carlossantiagocruz/SWIFT-PROGRAMMING/.gitignore | head -31 > /Users/carlossantiagocruz/SWIFT-PROGRAMMING/$directoryName/.gitignore
+					if [ -f "$GITIGNORE_FILE" ]
+						then
+							echo "gitignore file is succesfully copied in $directoryName"
+					fi
 	fi
 done
