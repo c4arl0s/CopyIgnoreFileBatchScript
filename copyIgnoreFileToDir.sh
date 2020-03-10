@@ -20,7 +20,7 @@ do
 					echo "gitignore file does not exist in $directoryName"
 					echo "Copying ..."
 					# does whatever else you want
-					cat /Users/carlossantiagocruz/SWIFT-PROGRAMMING/.gitignore | head -31 > /Users/carlossantiagocruz/SWIFT-PROGRAMMING/$directoryName/.gitignore
+					cat /Users/carlossantiagocruz/SWIFT-PROGRAMMING/gitignore | head -31 > /Users/carlossantiagocruz/SWIFT-PROGRAMMING/$directoryName/.gitignore
 					if [ -f "$GITIGNORE_FILE" ]
 						then
 							echo "gitignore file is succesfully copied in $directoryName"
